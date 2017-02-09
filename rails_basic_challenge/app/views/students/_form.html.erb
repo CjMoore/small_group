@@ -1,0 +1,18 @@
+<%= form_for(@student) do |f| %>
+  <ul>
+    <% @student.errors.full_messages.each do |error|  %>
+      <li><%= error %></li>
+      <% end %>
+  </ul>
+
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name , id: "name"%>
+  </p>
+
+  <%= render partial: 'shared/form' %>
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <%end%>

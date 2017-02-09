@@ -1,0 +1,23 @@
+<% form_for [@student, @address] do |f|%>
+
+  <p>
+    <%= f.label :number %><br/>
+    <%= f.text_field :number%>
+  </p>
+
+  <p>
+    <%= f.label :street %><br/>
+    <%= f.text_field :street%>
+  </p>
+
+  <p>
+    <%= f.label :city %><br/>
+    <%= f.text_field :city%>
+  </p>
+
+  <p>
+    <%= f.label :state %><br/>
+    <%= f.text_field :state%>
+  </p>
+
+<% end %>

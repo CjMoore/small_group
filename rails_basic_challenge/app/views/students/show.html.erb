@@ -1,0 +1,26 @@
+
+<h1><%= @student.name %></h1>
+
+<h4>Courses</h4>
+<ul>
+  <% @student.courses.each do |course| %>
+    <li>
+      <%= link_to course.subject, course_path(course) %>
+    </li>
+  <% end %>
+</ul>
+
+
+<h4>Addresses</h4>
+<ul>
+  <% @student.addresses.each do |address| %>
+    <li>
+      <%= address.number %>  <%= address.street %><br/>
+      <%= address.city %>, <%= address.state %> <%= address.zip_code %>
+    </li>
+
+    <li>
+      Alumnus: <%= @student.is_alumnus.to_s %>
+    </li>
+  <% end %>
+</ul>
